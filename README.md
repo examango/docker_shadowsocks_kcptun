@@ -2,11 +2,11 @@ docker_shadowsocks_kcptun
 ===
 没有镜像，使用`docker-compose`启动。
 
-## 环境需求
+## 本地环境需求
 * 需要`mac`系统；
 * 需要安装`jq`，使用`brew install jq`就可；
 
-## 安装docker
+## vps服务器安装docker
 参考docker官网文档[Get Docker Engine - Community for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)。
 
 值得注意的是，需要用[腾讯软件源](https://mirrors.cloud.tencent.com/)中的`docker-ce.repo`地址替代官网文档中`docker-ce.repo`的地址。
