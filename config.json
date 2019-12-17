@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "port": "{{var_port}}",
+            "pwd": "{{var_pwd}}",
+            "kcptun_port": "{{var_kcptun_port}}",
+            "kcptun_pwd": "{{var_kcptun_pwd}}",
+            "method": "{{var_method}}",
+            "own": "{{var_own}}"
+        },
+        {
+            "port": "{{var_port}}",
+            "pwd": "{{var_pwd}}",
+            "kcptun_port": "{{var_kcptun_port}}",
+            "kcptun_pwd": "{{var_kcptun_pwd}}",
+            "method": "{{var_method}}",
+            "own": "{{var_own}}"
+        }
+    ]
+}
