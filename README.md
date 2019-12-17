@@ -2,6 +2,10 @@ docker_shadowsocks_kcptun
 ===
 没有镜像，使用`docker-compose`启动。
 
+## 环境需求
+* 需要`mac`系统；
+* 需要安装`jq`，使用`brew install jq`就可；
+
 ## 安装docker
 参考docker官网文档[Get Docker Engine - Community for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)。
 
