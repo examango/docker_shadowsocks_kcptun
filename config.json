@@ -6,7 +6,8 @@
             "kcptun_port": "{{var_kcptun_port}}",
             "kcptun_pwd": "{{var_kcptun_pwd}}",
             "method": "{{var_method}}",
-            "own": "{{var_own}}"
+            "own": "{{var_own}}",
+            "init": true
         },
         {
             "port": "{{var_port}}",
@@ -14,7 +15,8 @@
             "kcptun_port": "{{var_kcptun_port}}",
             "kcptun_pwd": "{{var_kcptun_pwd}}",
             "method": "{{var_method}}",
-            "own": "{{var_own}}"
+            "own": "{{var_own}}",
+            "init": false
         }
     ]
 }

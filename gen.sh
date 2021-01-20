@@ -18,15 +18,17 @@ for index in $(seq 1 "$len"); do
   item=$(echo "$list" | jq ".[$index-1]")
   #	echo "索引:$index"
   #	echo "内容:$item"
-  port=$(echo "$item" | jq -r'.port')
+  port=$(echo "$item" | jq -r '.port')
   pwd=$(echo "$item" | jq -r '.pwd')
-  kcptun_port=$(echo "$item" | jq -r'.kcptun_port')
+  kcptun_port=$(echo "$item" | jq -r '.kcptun_port')
   kcptun_pwd=$(echo "$item" | jq -r '.kcptun_pwd')
   method=$(echo "$item" | jq -r '.method')
+  init=$(echo "$item" | jq -r '.init')
   if [ "$method" = 'null' ]; then
     method="\${METHOD}"
   fi
   own=$(echo "$item" | jq -r '.own')
+  if [ "$init" != 'false' ]; then
   echo "\
   # user : $own
   '$port':
@@ -39,13 +41,14 @@ for index in $(seq 1 "$len"); do
       - PASSWORD=$pwd
     restart: always
   '$port-$kcptun_port.kcptun':
-    image: xtaci/kcptun
+    image: xtaci/kcptun:v20190924
     ports:
       - \"$kcptun_port:$kcptun_port/udp\"
     command: server -t \${IP}:$port -l :$kcptun_port -key $kcptun_pwd -mode \${MODE}
     depends_on:
       - \"$port\"
     restart: always" >>docker-compose.yml
+  fi
   #	echo "写入索引($index)数据成功"
 done
 #echo '结束遍历'
