@@ -29,7 +29,7 @@ docker_shadowsocks_kcptun
 
 ## 进入容器
 
-`docker exec -it {container name} /bin/sh`
+`docker exec -it {{container name}} /bin/sh`
 
 ## 文件说明
 
