@@ -7,7 +7,8 @@ docker_shadowsocks_kcptun
 
 ## vps服务器安装docker
 参考[Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)安装docker。
-参考[Install Docker Compose](https://docs.docker.com/compose/install/)安装docker-compose
+
+参考[Install Docker Compose](https://docs.docker.com/compose/install/)安装docker-compose。
 
 值得注意的是，如果在国内服务器搭建的话，需要用[腾讯软件源](https://mirrors.cloud.tencent.com/)中的`docker-ce.repo`地址替代官网文档中`docker-ce.repo`的地址。
 
