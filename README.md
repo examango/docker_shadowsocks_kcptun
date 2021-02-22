@@ -6,9 +6,10 @@ docker_shadowsocks_kcptun
 需要安装`jq`，mac系统使用`brew install jq`即可，其他系统未知。
 
 ## vps服务器安装docker
-参考docker官网文档[Get Docker Engine - Community for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)。
+参考[Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)安装docker。
+参考[Install Docker Compose](https://docs.docker.com/compose/install/)安装docker-compose
 
-值得注意的是，需要用[腾讯软件源](https://mirrors.cloud.tencent.com/)中的`docker-ce.repo`地址替代官网文档中`docker-ce.repo`的地址。
+值得注意的是，如果在国内服务器搭建的话，需要用[腾讯软件源](https://mirrors.cloud.tencent.com/)中的`docker-ce.repo`地址替代官网文档中`docker-ce.repo`的地址。
 
 ## 文件说明
 文件里面有需要替换的变量，统一格式为：`{{var_xx}}`
