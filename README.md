@@ -19,17 +19,31 @@ docker_shadowsocks_kcptun
 
 值得注意的是，如果在国内服务器搭建的话，需要用[腾讯软件源](https://mirrors.cloud.tencent.com/)中的`docker-ce.repo`地址替代官网文档中`docker-ce.repo`的地址。
 
-## 设置docker跟随系统启动
+## 命令
+
+### 设置docker跟随系统启动
 
 `sudo systemctl enable docker`
 
-## 重启docker
+### 重启docker
 
 `sudo systemctl restart docker`
 
-## 进入容器
+### 进入容器
 
 `docker exec -it {{container name}} /bin/sh`
+
+### 关闭并删除所有容器
+
+`docker stop $(docker ps -q) & docker rm $(docker ps -aq)`
+
+### 关闭所有容器
+
+`docker stop $(docker ps -a | awk '{ print $1}' | tail -n +2)`
+
+### 删除所有容器
+
+`docker rm $(docker ps -a | awk '{ print $1}' | tail -n +2)`
 
 ## 文件说明
 
